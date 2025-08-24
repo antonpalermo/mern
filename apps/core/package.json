@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "dotenv -e ../../.env -- nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "^1.4.7",
@@ -13,6 +14,7 @@
     "morgan": "^1.10.1"
   },
   "devDependencies": {
+
     "nodemon": "^3.1.10"
   },
   "author": "Anton Angelo N. Palermo <anpbusinessmail@gmail.com>",
