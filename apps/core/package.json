@@ -11,10 +11,10 @@
     "cookie-parser": "^1.4.7",
     "debug": "^4.4.1",
     "express": "^5.1.0",
+    "mongoose": "^8.18.0",
     "morgan": "^1.10.1"
   },
   "devDependencies": {
-
     "nodemon": "^3.1.10"
   },
   "author": "Anton Angelo N. Palermo <anpbusinessmail@gmail.com>",
