@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/antonpalermo/mern#readme",
   "workspaces": [
+    "apps/client",
     "apps/core"
   ]
 }
