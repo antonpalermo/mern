@@ -9,6 +9,8 @@ services:
       - 5173:5173
     depends_on:
       - server
+    networks:
+      - client-network
 
   server:
     build:
@@ -24,6 +26,9 @@ services:
       - 3000:3000
     depends_on:
       - mongo
+    networks:
+      - client-network
+      - db-network
 
   mongo:
     image: mongo
@@ -37,6 +42,8 @@ services:
       - .env
     ports:
       - 27017:27017
+    networks:
+      - db-network
 
   mongo-express:
     image: mongo-express
@@ -49,6 +56,8 @@ services:
       - 8081:8081
     env_file:
       - .env
+    networks:
+      - db-network
 
 secrets:
   db_url:
@@ -66,3 +75,7 @@ secrets:
 
 volumes:
   db-data:
+
+networks:
+  db-network:
+  client-network:
